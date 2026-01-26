@@ -1,4 +1,4 @@
-// Reveal photo cards on scroll
+// Smooth reveal using IntersectionObserver
 const photoCards = document.querySelectorAll('.photo-card');
 
 const observer = new IntersectionObserver(
@@ -11,7 +11,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.2 }
+  { threshold: 0.15 }
 );
 
 photoCards.forEach(card => observer.observe(card));
